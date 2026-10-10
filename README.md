@@ -1,6 +1,6 @@
 # PolyU Shuttle 下一班
 
-網站：https://sisuben.github.io/polyu-shuttle-bus/
+網站：https://sisubeny.space/polyu-shuttle-bus/
 
 根據用戶提供的 2026–27 年 PolyU / CPCE Shuttle Bus 時間表，查詢 WK、理大本部、HHB 各上車站的下一班開出時間。時間表只涵蓋指定服務期的星期一至五，公眾假期除外。這是按時間表計算，並非即時車輛 GPS 到站預測；路況、停駛或學校更改安排可能影響實際班次。
 
