@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10243b">
+  <meta name="description" content="查詢理大穿梭巴士下一班時間。根據 2026–27 年 CPCE 時間表推算，非即時車輛定位。">
+  <title>PolyU Shuttle 下一班</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">P</span><span>PolyU Shuttle</span></div>
+      <p id="clock" class="clock">香港時間</p>
+    </header>
+
+    <section class="workspace" aria-labelledby="page-title">
+      <div class="heading-row">
+        <div>
+          <p class="eyebrow red">穿梭巴士 · 2026–27</p>
+          <h1 id="page-title">下一班幾時開？</h1>
+        </div>
+        <span id="service" class="service-pill">載入中</span>
+      </div>
+
+      <div class="route-picker">
+        <div class="field">
+          <label for="from">上車地點</label>
+          <select id="from" name="from">
+            <option value="WK">西九龍校園 · WK</option>
+            <option value="POLYU">理大本部 · PolyU</option>
+            <option value="HHB">紅磡灣校園 · HHB</option>
+          </select>
+        </div>
+        <div class="direction" aria-hidden="true">→</div>
+        <div class="field">
+          <label for="to">目的地</label>
+          <select id="to" name="to"></select>
+        </div>
+      </div>
+
+      <div id="result" class="result-card" aria-live="polite">
+        <div class="empty"><p>正在查詢班次…</p></div>
+      </div>
+
+      <div class="next-row">
+        <h2>之後兩班</h2>
+        <button id="refresh" type="button" aria-label="重新計算下一班">更新時間 <span aria-hidden="true">↻</span></button>
+      </div>
+      <ol id="upcoming" class="upcoming"></ol>
+    </section>
+
+    <aside class="information" aria-label="時間表說明">
+      <div>
+        <h2>時間表資訊</h2>
+        <p>根據你提供的 2026–27 年 PolyU / CPCE Shuttle Bus 時間表計算，逢星期一至五服務，公眾假期除外。學期期間有 Express 直達班次；暑假及學期假期只有普通班次。</p>
+      </div>
+      <p class="important">顯示的是上車站開出時間，不是車輛即時 GPS 到站預測；路面情況可能令班次延誤。理大本部站的時間為官方估計。</p>
+      <p class="source">公眾假期依據 <a href="https://www.1823.gov.hk/tc/hong-kong-public-holidays-ical" target="_blank" rel="noopener noreferrer">香港政府 1823 日曆</a>。班次如有改動，請以 <a href="https://cfm.cpce-polyu.edu.hk/useful-information/shuttle-bus-schedule" target="_blank" rel="noopener noreferrer">CPCE 官方時間表</a>及校方通知為準。</p>
+    </aside>
+  </main>
+</body>
+</html>
